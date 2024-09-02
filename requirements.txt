@@ -1,6 +1,4 @@
-fastapi
 Flask
-uvicorn
 geopy
 pyproj
 pandas
