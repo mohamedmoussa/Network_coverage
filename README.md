@@ -1,3 +1,7 @@
+# Network Coverage API
+
+This is a Flask-based API that allows users to query the network coverage (2G/3G/4G) of different mobile operators in France based on a textual address.
+
 ## Installation
 1. **Install the required Python packages**:
     pip install -r requirements.txt
