@@ -1,0 +1,10 @@
+fastapi
+Flask
+uvicorn
+geopy
+pyproj
+pandas
+geopandas
+shapely
+Flask-Caching
+gunicorn
