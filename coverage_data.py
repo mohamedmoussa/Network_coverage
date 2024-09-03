@@ -2,10 +2,11 @@ import pandas as pd
 import geopandas as gpd
 from shapely.geometry import Point
 from pyproj import Transformer
+from typing import Dict
 
 
 class NetworkCoverage:
-    def __init__(self, csv_path):
+    def __init__(self, csv_path) -> None:
         self.providers = {
             20801: "Orange",
             20810: "SFR",
@@ -23,7 +24,7 @@ class NetworkCoverage:
         self.gdf.set_crs(epsg=4326, inplace=True)
         self.gdf_sindex = self.gdf.sindex
 
-    def get_coverage(self, latitude, longitude, radius_km=5):
+    def get_coverage(self, latitude, longitude, radius_km=5) -> Dict[str, Dict[str, bool]]:
         point = Point(longitude, latitude)
         radius_deg = radius_km / 111
         buffer = point.buffer(radius_deg)

@@ -3,6 +3,7 @@ from geopy.geocoders import Nominatim
 from coverage_data import NetworkCoverage
 from flask_caching import Cache
 import logging
+from typing import Any
 
 app = Flask(__name__)
 
@@ -13,7 +14,7 @@ logging.basicConfig(level=logging.INFO)
 
 
 @app.route('/api/network_coverage', methods=['GET'])
-def network_coverage():
+def network_coverage() -> Any:
     address = request.args.get('q')
     if not address:
         return jsonify({"error": "Paramètre 'q' manquant"}), 400
