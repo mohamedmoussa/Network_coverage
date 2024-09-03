@@ -10,13 +10,4 @@ env.bak/
 venv.bak/
 
 *.pyc
-
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-
-
-# End of https://www.toptal.com/developers/gitignore/api/django
 .idea
