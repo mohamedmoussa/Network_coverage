@@ -9,6 +9,9 @@ This is a Flask-based API that allows users to query the network coverage (2G/3G
 ## Running the Application
 
 1. **Start the Flask server**:
-
-   gunicorn -w 4 -b 127.0.0.1:5000 app:app
+    
+    Run Flask application: python app.py
+    
+   Run Flask application with Gunicorn: gunicorn -w 4 -b 127.0.0.1:5000 app:app
+   ==> adjust the number of worker based on your server CPU cores
 
